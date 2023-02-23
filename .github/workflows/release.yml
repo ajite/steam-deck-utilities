@@ -28,6 +28,9 @@ jobs:
         run: |
           go mod tidy
 
+      - name: Test with the Go CLI
+        run: go test
+
       - name: Build
         run: GOOS=linux GOARCH=amd64 go build -ldflags="-s -w" -o cryo_utilities ./cmd/cryoutilities
 
