@@ -1,6 +1,10 @@
 name: Main
 
-on: push
+on:
+  push:
+    branches: [ test-ci ]
+  pull_request:
+    branches: [ test-ci ]
 
 env:
   release_name: 2.0-${{github.run_number}}
